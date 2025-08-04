@@ -4,12 +4,12 @@ Cpf = str(input())
 print ("Digite seu telefone:")
 Telefone = str(input())
 print ("Digite seu ano de nascimento:")
-Nascimento = str(input())
+Nascimento = int(input())
 print("Seus dados:")
 print("Nome: " + Nome)
 print("Cpf: " + Cpf)
 print("Telefone: " + Telefone)
-print("Telefone: " + Nascimento)
+print("Nascido em:"+ f"{Nascimento}")
 print ("Digite seu peso:")
 Peso = float(input())
 print ("Digite sua altura:")
@@ -18,10 +18,8 @@ Imc = str(Peso/(Altura * Altura))
 print ( Nome + " seu IMC é:", Imc )
 
 print ("Digite qual ano estamos:")
-NossoAno = (input())
-print ("Digite seu ano de nascimento:")
-NascimentoData = (input())
-Idade =str(NascimentoData - NascimentoData)
+NossoAno = int(input())
+Idade = NossoAno - Nascimento
 print (Idade)
 
 print ("quantos dias você ficou com o carro")
@@ -31,27 +29,27 @@ print ( ValorSerPago)
 
 
 print ("temp atual")
-TempAtual = input()
+TempAtual = int(input())
 TempEmFarhenheit = (TempAtual * 9/5) + 32
-
+print (f"{TempEmFarhenheit}")
 
 
 
 print ("Digite suas notas")
 print ("Nota 1")
-Nota1 = input()
+Nota1 = (input)
 print ("Nota 2")
-Nota2 = input()
+Nota2 = (input)
 print ("Nota 3")
-Nota3 = input()
+Nota3 = (input)
 print ("Nota 4")
-Nota4 = input()
-MediaSua = (Nota1 + Nota2 + Nota3 + Nota4)/4
+Nota4 = (input)
+MediaSua = str(((f"{Nota1}") + (f"{Nota2}") + (f"{Nota3}") + (f"{Nota4}"))/4)
 print (MediaSua)
 
 
 IdadeMeses = Idade * 12
-print ("sua idade é: " +IdadeMeses)
+print ("sua idade é: " + f"{IdadeMeses}")
 
 
 

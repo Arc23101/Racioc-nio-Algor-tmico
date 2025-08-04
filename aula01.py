@@ -23,9 +23,9 @@ Idade = NossoAno - Nascimento
 print (Idade)
 
 print ("quantos dias você ficou com o carro")
-Dias = input()
+Dias = int(input())
 ValorSerPago = (Dias * 100)
-print ( ValorSerPago)
+print (ValorSerPago)
 
 
 print ("temp atual")
@@ -37,14 +37,14 @@ print (f"{TempEmFarhenheit}")
 
 print ("Digite suas notas")
 print ("Nota 1")
-Nota1 = (input)
+Nota1 = int(input())
 print ("Nota 2")
-Nota2 = (input)
+Nota2 = int(input())
 print ("Nota 3")
-Nota3 = (input)
+Nota3 = int(input())
 print ("Nota 4")
-Nota4 = (input)
-MediaSua = str(((f"{Nota1}") + (f"{Nota2}") + (f"{Nota3}") + (f"{Nota4}"))/4)
+Nota4 = int(input())
+MediaSua = str((Nota1 + Nota2 + Nota3 + Nota4)/4)
 print (MediaSua)
 
 

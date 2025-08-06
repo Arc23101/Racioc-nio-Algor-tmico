@@ -25,13 +25,13 @@ print (Idade)
 print ("quantos dias você ficou com o carro")
 Dias = int(input())
 ValorSerPago = (Dias * 100)
-print (ValorSerPago)
+print ("isso é quanto voce deve pagar: " + ValorSerPago)
 
 
 print ("temp atual")
 TempAtual = int(input())
 TempEmFarhenheit = (TempAtual * 9/5) + 32
-print (f"{TempEmFarhenheit}")
+print (f"{TempEmFarhenheit}" + "F")
 
 
 
@@ -49,7 +49,7 @@ print (MediaSua)
 
 
 IdadeMeses = Idade * 12
-print ("sua idade é: " + f"{IdadeMeses}")
+print ("sua idade é: " + f"{IdadeMeses}" + " Meses")
 
 
 

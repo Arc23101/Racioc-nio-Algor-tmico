@@ -2,14 +2,14 @@ print("Digite um numero: ")
 Num1 = int(input())
 Num2 = (Num1 - 1)
 Num3 = (Num1 + 1)
-print ("anterior = " + F"{Num2}", "Seu numero = " + F"{Num1}", "Proximo numero = " + F"{Num3}")
+print ("anterior = " + F"{Num2}", "Seu numero = " + F"{Num1}", "Próximo numero = " + F"{Num3}")
 
 print ("Digite seu ano de nascimento: ")
 Nascimento = int(input())
 print ("Digite qual ano estamos: ")
 NossoAno = int(input())
 Idade = NossoAno - Nascimento
-print ("Sua idade é: " + f"{Idade}")
+print ("Sua idade até o final do ano é: " + f"{Idade}")
 
 print ("Digite seu salário professor: ")
 Salario = int(input())

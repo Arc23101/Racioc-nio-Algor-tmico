@@ -34,10 +34,10 @@ print (f"Sua temperatura em fahrenheit é: {Tempfahrenheit} F")
 
 
 print ("Digite suas notas")
-Nota1 = int(input("Nota 1: "))
-Nota2 = int(input("Nota 2: "))
-Nota3 = int(input("Nota 3: "))
-Nota4 = int(input("Nota 4: "))
+Nota1 = float(input("Nota 1: "))
+Nota2 = float(input("Nota 2: "))
+Nota3 = float(input("Nota 3: "))
+Nota4 = float(input("Nota 4: "))
 MediaSua = (Nota1 + Nota2 + Nota3 + Nota4)/4
 print (f"Sua média é: {MediaSua}")
 

@@ -27,9 +27,9 @@ ValorSerPago = (Dias * 100)
 print ("isso é quanto voce deve pagar: " + f"{ValorSerPago}")
 
 
-TempAtual = float(input("temperatura atual em celsius: ")))
-TempEmFarhenheit = (TempAtual * 9/5) + 32
-print (f"{TempEmFarhenheit} F")
+TempAtualCelsius = float(input("temperatura atual em celsius: ")))
+Tempfahrenheit = (TempAtualCelsius * 9/5) + 32
+print (f"Sua temperatura em fahrenheit é: {Tempfahrenheit} F")
 
 
 

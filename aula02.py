@@ -1,5 +1,5 @@
 
-weight = int(input("Digite o peso do lutador para descobrir sua categoria: "))
+weight = float(input("Digite o peso do lutador para descobrir sua categoria: "))
 if peso < 50:
     print("Categoria palha")
 elif 50 <= weight < 60:
@@ -36,7 +36,7 @@ else:
 print(f"Primeiro: {first}, segundo: {second}, terceiro: {third}")
 
 
-studentScore = int(input("Digite a sua nota: "))
+studentScore = float(input("Digite a sua nota: "))
 presence = int(input("Agora digite sua presença: "))
 if presence >= 70:
     print("Presença atingida: ")

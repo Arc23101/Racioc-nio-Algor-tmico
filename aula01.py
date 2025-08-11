@@ -27,10 +27,9 @@ ValorSerPago = (Dias * 100)
 print ("isso é quanto voce deve pagar: " + f"{ValorSerPago}")
 
 
-print ("temp atual")
-TempAtual = int(input())
+TempAtual = int(input("temperatura atual do PC: ")))
 TempEmFarhenheit = (TempAtual * 9/5) + 32
-print (f"{TempEmFarhenheit}" + "F")
+print (f"{TempEmFarhenheit} F")
 
 
 

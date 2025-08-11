@@ -20,7 +20,7 @@ print ( Nome + " seu IMC é:", Imc )
 print ("Digite qual ano estamos:")
 NossoAno = int(input())
 Idade = NossoAno - Nascimento
-print (Idade)
+print (f"Sua idade é: {Idade}")
 
 print ("quantos dias você ficou com o carro")
 Dias = int(input())

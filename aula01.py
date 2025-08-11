@@ -27,23 +27,19 @@ ValorSerPago = (Dias * 100)
 print ("isso é quanto voce deve pagar: " + f"{ValorSerPago}")
 
 
-TempAtual = int(input("temperatura atual do PC: ")))
+TempAtual = float(input("temperatura atual em celsius: ")))
 TempEmFarhenheit = (TempAtual * 9/5) + 32
 print (f"{TempEmFarhenheit} F")
 
 
 
 print ("Digite suas notas")
-print ("Nota 1")
-Nota1 = int(input())
-print ("Nota 2")
-Nota2 = int(input())
-print ("Nota 3")
-Nota3 = int(input())
-print ("Nota 4")
-Nota4 = int(input())
+Nota1 = int(input("Nota 1: "))
+Nota2 = int(input("Nota 2: "))
+Nota3 = int(input("Nota 3: "))
+Nota4 = int(input("Nota 4: "))
 MediaSua = str((Nota1 + Nota2 + Nota3 + Nota4)/4)
-print (MediaSua)
+print (f"Sua média é: {MediaSua}")
 
 
 IdadeMeses = Idade * 12

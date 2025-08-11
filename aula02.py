@@ -1,5 +1,5 @@
 
-weight = float(input("Digite o peso do lutador para descobrir sua categoria: "))
+weight = float(input("Digite o peso em KG do lutador para descobrir sua categoria: "))
 if peso < 50:
     print("Categoria palha")
 elif 50 <= weight < 60:
@@ -37,7 +37,7 @@ print(f"Primeiro: {first}, segundo: {second}, terceiro: {third}")
 
 
 studentScore = float(input("Digite a sua nota: "))
-presence = int(input("Agora digite sua presença: "))
+presence = int(input("Agora digite sua presença de 0 a 100: "))
 if presence >= 70:
     print("Presença atingida: ")
     presencaAtingida = True
@@ -58,7 +58,7 @@ elif presencaAtingida and 9 < studentScore:
     print("Conceito: A \nAprovado")
 
 
-currentTimeH = int(input("Digite que horas são: "))
+currentTimeH = int(input("Digite as horas atuais: "))
 currentTimeM = int(input("Agora digite os minutos: "))
 pucOpenH = 7
 pucOpenM = 30

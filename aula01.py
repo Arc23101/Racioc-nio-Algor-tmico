@@ -22,10 +22,9 @@ NossoAno = int(input())
 Idade = NossoAno - Nascimento
 print (f"Sua idade até o fim do ano é: {Idade}")
 
-print ("quantos dias você ficou com o carro")
-Dias = int(input())
+Dias = int(input("quantos dias você ficou com o carro"))
 ValorSerPago = (Dias * 100)
-print ("isso é quanto voce deve pagar: " + ValorSerPago)
+print ("isso é quanto voce deve pagar: " + f"{ValorSerPago}")
 
 
 print ("temp atual")

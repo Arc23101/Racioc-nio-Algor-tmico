@@ -40,22 +40,20 @@ studentScore = float(input("Digite a sua nota: "))
 presence = int(input("Agora digite sua presença de 0 a 100: "))
 if presence >= 70:
     print("Presença atingida: ")
-    presencaAtingida = True
+    if studentScore <= 4:
+        print("Conceito: F \nRecuperação")
+    elif 4 < studentScore <= 6:
+        print("Conceito: E \nRecuperação")
+    elif 6 < studentScore <= 7:
+        print("Conceito: D \nAprovado")
+    elif 7 < studentScore <= 8:
+        print("Conceito: C \nAprovado")
+    elif 8 < studentScore <= 9:
+        print("Conceito: B \nAprovado")
+    elif 9 < studentScore:
+        print("Conceito: A \nAprovado")
 else:
     print("Presença insulficiente. Reprovado")
-    presencaAtingida = False
-if presencaAtingida and studentScore <= 4:
-    print("Conceito: F \nRecuperação")
-elif presencaAtingida and 4 < studentScore <= 6:
-    print("Conceito: E \nRecuperação")
-elif presencaAtingida and 6 < studentScore <= 7:
-    print("Conceito: D \nAprovado")
-elif presencaAtingida and 7 < studentScore <= 8:
-    print("Conceito: C \nAprovado")
-elif presencaAtingida and 8 < studentScore <= 9:
-    print("Conceito: B \nAprovado")
-elif presencaAtingida and 9 < studentScore:
-    print("Conceito: A \nAprovado")
 
 
 currentTimeH = int(input("Digite as horas atuais: "))

@@ -31,9 +31,9 @@ Altura = float(input("Qual a altura(metros): "))
 areaEmMetros = ((3.14 * (Raio * Raio) * 2) + (2 * 3.14 * Raio * Altura))
 LitrosLata = 5
 LitroMetro = 3
-NumLatas = ((areaEmMetros/3)/5)
+NumLatas = ((areaEmMetros/LitroMetro)/LitrosLata)
 NumLatasArredondado = (math.ceil(NumLatas))
-vGastoLatas = (NumLatasArredondado) * 50
+vGastoLatas = (NumLatasArredondado) * vLata
 print("Aqui esta o numero de latas arredondando para cima: " + f"{NumLatasArredondado}" + " e este é o valor a ser gasto em reais: "  + f"{vGastoLatas}")
 
 

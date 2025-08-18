@@ -15,6 +15,9 @@ else:
 num1 = float(input("Digite 3 números aleatórios e eles serão ordenado do maior para o menor: \nPrimeiro numero: "))
 num2 = float(input("Segundo número: "))
 num3 = float(input("Terceiro número: "))
+first = 1
+second = 1
+third = 1
 if num1 > num2 and  num1> num3:
     first = num1
 elif num2 > num1 and  num2 > num3:

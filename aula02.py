@@ -32,7 +32,7 @@ if num1 < num2 and num1 < num3:
 elif num2 < num1 and num2 < num3:
     third = num2
 else:
-    terceiro = num3
+    third = num3
 print(f"Primeiro: {first}, segundo: {second}, terceiro: {third}")
 
 

@@ -70,8 +70,18 @@ print (f"This is what all the numbers combine add to: {num8Soma} \nAnd this is w
 num9Min = int(input("Write a inicial limit: "))
 num9Max = int(input("Write a end limit: "))
 num9 = 3
-
+while (num9Min % 3) > 0:
+    num9Min -= 1
+while num9Min < num9Max:
+    if (num9Min + 3) < num9Max:
+        print(num9Min + 3)
+    num9Min += 3
 print("End")
+
+##10
+num10 = 
+
+
 
 ##11
 num11Primeiro = 1

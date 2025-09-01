@@ -89,19 +89,19 @@ minFortax = 1000
 coin = int(input("Type 1 for Dolar, 2 for Euro and 3 for Libra: "))
 valorAseradquirido = int(input("How much would you like to acquire(for less than 1000 we take 5 porcent more money and for more than 1000 we take 3 porcent): "))
 moneyNeeded = 0
-if coin == 1 and valorAseradquirido < minFortax:
+if coin == 1 and valorAseradquirido <= minFortax:
     moneyNeeded = (num10Dolar * valorAseradquirido *lessThan1000)
     print(f"This is the money in reais needed: {moneyNeeded}")
 elif coin == 1 and valorAseradquirido > minFortax:
     moneyNeeded = (num10Dolar * valorAseradquirido *moreThan1000)
     print(f"This is the money in reais needed: {moneyNeeded}")
-elif coin == 2 and valorAseradquirido < minFortax:
+elif coin == 2 and valorAseradquirido <= minFortax:
     moneyNeeded = (num10Euro * valorAseradquirido *lessThan1000)
     print(f"This is the money in reais needed: {moneyNeeded}")
 elif coin == 2 and valorAseradquirido > minFortax:
     moneyNeeded = (num10Euro * valorAseradquirido *moreThan1000)
     print(f"This is the money in reais needed: {moneyNeeded}")
-elif coin == 3 and valorAseradquirido < minFortax:
+elif coin == 3 and valorAseradquirido <= minFortax:
     moneyNeeded = (num10Libra * valorAseradquirido *lessThan1000)
     print(f"This is the money in reais needed: {moneyNeeded}")
 elif coin == 3 and valorAseradquirido > minFortax:

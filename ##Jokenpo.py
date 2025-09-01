@@ -1,4 +1,4 @@
-##Jokenpo(Antony V Braghini)
+##Jokenpô(Antony V Braghini)
 
 import random
 Modalidade = 0

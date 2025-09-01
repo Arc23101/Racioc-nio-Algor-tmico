@@ -1,4 +1,4 @@
-##Jokenpo(Antony V Braghini)
+##Jokenpô(Antony V Braghini)
 import random
 def coletarJogadaHumano():
     escolhaPlayer = int(input("Digite 1 para tesoura, 2 para Pedra e 3 para papel: "))

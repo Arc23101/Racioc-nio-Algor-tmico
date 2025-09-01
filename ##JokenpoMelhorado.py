@@ -33,7 +33,7 @@ if modalidade < 1 or modalidade > 3:
         modalidade = int(input("Numero inválido digite Novamente: \n1 para humanao vs humano \n2 para humano vs bot \n3 para bot vs bot: "))
 if modalidade < 3:
     nomeP1 = input("Digite o nome do player 1: ")
-    if modalidade < 2
+    if modalidade < 2:
         nomeP2 = input("Digite o nome do player 2: ")
 while continuar == 1:
     if modalidade == 1:

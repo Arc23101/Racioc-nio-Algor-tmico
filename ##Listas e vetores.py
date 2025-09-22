@@ -46,8 +46,8 @@ indice = 0
 while indice < len(numParaMedia):
     total += (numParaMedia[indice])
     indice += 1
-total = total / (len(numParaMedia))
-print(f"Media dos numeros {total}")
+media = total / (len(numParaMedia))
+print(f"Media dos numeros {media}")
 
 
 indice = 0

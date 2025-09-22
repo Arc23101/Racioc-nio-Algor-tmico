@@ -73,7 +73,7 @@ indice = 0
 while indice < 100:
     print (lista100[indice])
     indice += 1
-'''
+
 numMegasena = [100,100,100,100,100,100]
 indice = 0
 while indice < len(numMegasena):
@@ -93,4 +93,50 @@ while indice < 6:
         acertos += 1
     indice += 1
 print(F"Esses foram os numeros sorteados: {numMegasena} \nVocê jogou {meusNumeros} \nVocê acertou {acertos}")
+'''
+##Desafio
+timesValorant = ['loud', 'furia', '2g', 'mibr']
+indice = 0 
+vidas = 4
+letrasErradas = []
+letrasAcertadas = []
+palavraSorteada = timesValorant[random.randint(0,3)]
+letrasCertas = []
+revelarLetras = []
+acertosNecessarios = 0
+resultadoDaRodada = (f"Você tem {vidas} Vidas \nVocê acertou essas letras {letrasAcertadas} \nE usou essas erradas {letrasErradas} \n{revelarLetras}")
+while indice < len(palavraSorteada):
+    letrasCertas.append (palavraSorteada[indice])
+    indice += 1
+    acertosNecessarios += 1
+indice = 0
+while indice < len(palavraSorteada):
+    revelarLetras.append("_")
+    indice += 1
+while vidas > 0 or acertosNecessarios > 0:
+    letraEscolhida = str(input("Digite uma letra minuscula ou numero para tentar acerta qual time do valorant foi escolhido: "))
+    if letraEscolhida in letrasCertas:
+        acertosNecessarios -= 1
+        letrasAcertadas.append(F"{letraEscolhida}")
+        indice = 0
+        while letraEscolhida != letrasCertas[indice]:
+            indice += 1
+        revelarLetras.insert(indice, F"{letraEscolhida}")
+        revelarLetras.pop()
+
+    else:
+        letrasErradas.append(F"{letraEscolhida}")
+        vidas -= 1
+    resultadoDaRodada = (f"Você tem {vidas} Vidas \nVocê acertou essas letras {letrasAcertadas} \nE usou essas erradas {letrasErradas} \n{revelarLetras}")
+    print(resultadoDaRodada)
+if vidas > 0:
+    print(F"Você ganho: {resultadoDaRodada}")
+else: 
+    print(F"Você perdeu: {resultadoDaRodada}")
+
+
+
+
+
+
 

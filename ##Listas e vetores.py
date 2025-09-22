@@ -1,6 +1,7 @@
 ##Listas e vetores
 import random
-'''
+
+
 listaNumeros = [0,0,0,0,0,0,0,0,0,0]
 indice = 0
 while indice < 10:
@@ -11,6 +12,7 @@ while indice < 10:
     print (listaNumeros[indice])
     indice += 1
 
+    
 indice = 0
 vogais = ['A','a','E','e','I','i','O','o','U','u']
 numVogais = 0
@@ -20,6 +22,7 @@ while indice < len(palavra):
         numVogais +=1
     indice += 1
 print (numVogais)
+
 
 continuar = 1
 numModificado = 0
@@ -36,6 +39,7 @@ while indice < len(listaNumeros):
     print(listaNumeros[indice])
     indice += 1
 
+    
 numParaMedia = [1,2,3,4]
 total = 0
 indice = 0
@@ -44,6 +48,7 @@ while indice < len(numParaMedia):
     indice += 1
 total = total / (len(numParaMedia))
 print(f"Media dos numeros {total}")
+
 
 indice = 0
 listaNumAleatorios = [0,0,0,0,0]
@@ -63,6 +68,7 @@ while indice < len(listaNumAleatorios):
 print (f"{somaPar} soma do pares")
 print (f"{somaImpar} soma do ímpares")
 
+
 lista100 = []
 indice = 0
 while indice < 100:
@@ -74,16 +80,21 @@ while indice < 100:
     print (lista100[indice])
     indice += 1
 
+
 numMegasena = [100,100,100,100,100,100]
+numMegaUsados = [110,110,110,101,110,101]
 indice = 0
 while indice < len(numMegasena):
     numMegasena[indice] = random.randint(1,60)
+    while numMegasena[indice] in numMegaUsados:
+        numMegasena[indice] = random.randint(1,60)
+    numMegaUsados[indice] = numMegasena[indice]
     indice += 1
 indice = 0
 meusNumeros = [0,0,0,0,0,0]
 while indice < len(meusNumeros):
     meusNumeros[indice] = int(input("Digite seus numeros da megasena: "))
-    while meusNumeros[indice] < 0 or meusNumeros[indice] > 60:
+    while meusNumeros[indice] < 0 and meusNumeros[indice] > 60:
         meusNumeros[indice] = int(input("Erro \nDigite seus numeros da megasena novamente: "))
     indice += 1
 acertos = 0
@@ -93,7 +104,8 @@ while indice < 6:
         acertos += 1
     indice += 1
 print(F"Esses foram os numeros sorteados: {numMegasena} \nVocê jogou {meusNumeros} \nVocê acertou {acertos}")
-'''
+
+
 ##Desafio
 timesValorant = ['loud', 'furia', '2g', 'mibr']
 indice = 0 
@@ -101,39 +113,34 @@ vidas = 4
 letrasErradas = []
 letrasAcertadas = []
 palavraSorteada = timesValorant[random.randint(0,3)]
-print(palavraSorteada)
-letrasCertas = []
+letrasCertas = list(palavraSorteada)
 revelarLetras = []
 acertosNecessarios = 0
 resultadoDaRodada = (f"Você tem {vidas} Vidas \nVocê acertou essas letras {letrasAcertadas} \nE usou essas erradas {letrasErradas} \n{revelarLetras}")
-while indice < len(palavraSorteada):
-    letrasCertas.append (palavraSorteada[indice])
-    indice += 1
-    acertosNecessarios += 1
-indice = 0
+
 while indice < len(palavraSorteada):
     revelarLetras.append("_")
     indice += 1
+    acertosNecessarios += 1
+
 while vidas > 0 and acertosNecessarios > 0:
     letraEscolhida = str(input("Digite uma letra minuscula ou numero para tentar acerta qual time do valorant foi escolhido: "))
     if letraEscolhida in letrasCertas and letraEscolhida not in letrasAcertadas:
-        acertosNecessarios -= 1
-        letrasAcertadas.append(F"{letraEscolhida}")
-        indice = 0
-        while letraEscolhida != letrasCertas[indice]:
-            indice += 1
-        revelarLetras.insert(indice, F"{letraEscolhida}")
-        revelarLetras.pop(indice+1)
-
+        for i, letra in enumerate(palavraSorteada):
+            if letra == letraEscolhida and revelarLetras[i] == "_":
+                revelarLetras[i] = letraEscolhida
+                acertosNecessarios -= 1
     else:
-        letrasErradas.append(F"{letraEscolhida}")
-        vidas -= 1
+       if letraEscolhida not in letrasErradas: 
+            letrasErradas.append(letraEscolhida)
+            vidas -= 1
     resultadoDaRodada = (f"Você tem {vidas} Vidas \nVocê acertou essas letras {letrasAcertadas} \nE usou essas erradas {letrasErradas} \n{revelarLetras}")
     print(resultadoDaRodada)
+
 if vidas > 0:
-    print(F"Você ganho: {resultadoDaRodada}")
+    print(F"Você ganho: {resultadoDaRodada} \n{palavraSorteada}")
 else: 
-    print(F"Você perdeu: {resultadoDaRodada}")
+    print(F"Você perdeu: {resultadoDaRodada} \n{palavraSorteada}")
 
 
 

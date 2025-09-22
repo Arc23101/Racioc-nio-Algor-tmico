@@ -116,7 +116,7 @@ while indice < len(palavraSorteada):
     indice += 1
 while vidas > 0 and acertosNecessarios > 0:
     letraEscolhida = str(input("Digite uma letra minuscula ou numero para tentar acerta qual time do valorant foi escolhido: "))
-    if letraEscolhida in letrasCertas:
+    if letraEscolhida in letrasCertas and letraEscolhida not in letrasAcertadas:
         acertosNecessarios -= 1
         letrasAcertadas.append(F"{letraEscolhida}")
         indice = 0

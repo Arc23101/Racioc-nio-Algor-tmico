@@ -101,6 +101,7 @@ vidas = 4
 letrasErradas = []
 letrasAcertadas = []
 palavraSorteada = timesValorant[random.randint(0,3)]
+print(palavraSorteada)
 letrasCertas = []
 revelarLetras = []
 acertosNecessarios = 0
@@ -113,7 +114,7 @@ indice = 0
 while indice < len(palavraSorteada):
     revelarLetras.append("_")
     indice += 1
-while vidas > 0 or acertosNecessarios > 0:
+while vidas > 0 and acertosNecessarios > 0:
     letraEscolhida = str(input("Digite uma letra minuscula ou numero para tentar acerta qual time do valorant foi escolhido: "))
     if letraEscolhida in letrasCertas:
         acertosNecessarios -= 1
@@ -122,7 +123,7 @@ while vidas > 0 or acertosNecessarios > 0:
         while letraEscolhida != letrasCertas[indice]:
             indice += 1
         revelarLetras.insert(indice, F"{letraEscolhida}")
-        revelarLetras.pop()
+        revelarLetras.pop(indice+1)
 
     else:
         letrasErradas.append(F"{letraEscolhida}")

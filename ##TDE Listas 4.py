@@ -1,14 +1,17 @@
 ##TDE Listas 4
 #1
+'''
 for num in range (1, 11):
     for numMultiplicado in range(1, 11):
         print(f"{num} X {numMultiplicado} = {num*numMultiplicado}")
-
+'''
 #2
 for num in range (1, 11):
     numMultiplicado = 1
-    print(f"{num} X {numMultiplicado} = {num*numMultiplicado}")
-    
+    if numMultiplicado <= 10:
+        print(f"{num} X {numMultiplicado} = {num*numMultiplicado}")
+        numMultiplicado += 1
+
 #3
 num1 = int(input("Digite um numero inteiro: "))
 num2 = int(input("Digite um numero inteiro: "))

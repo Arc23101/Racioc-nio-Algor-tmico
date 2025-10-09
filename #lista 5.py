@@ -88,12 +88,14 @@ for i in range(linhas):
                 if menor > matriz4x4[i][k]:
                     menor = matriz4x4[i][k]
 print (F"Matriz: {matriz4x4} \nMaior elemento: {maior} \nMenor elemento da linha do maior: {menor}")
-'''
+
 #4
 matriz5x5 =[]
 linhas = 5
 colunas = 5
 versões = ["A", "B", "C", "D"]
+primeiro = 1
+segundo = -1
 for n in range (linhas):
     matrizSecundaria = []
     for i in range (colunas):
@@ -117,11 +119,14 @@ elif versão == "B":
 elif versão == "C":
     for n in range(linhas):
         for j in range(colunas):
-
-
-
-
-            
+            if not j == primeiro and  not j == segundo:
+                        matriz5x5[n][j] = "x"
+        primeiro += 1
+        segundo += 1
+        if primeiro > 4:
+            primeiro = -1
+        if segundo > 4:
+            primeiro = -1  
 elif versão == "D":
     usado = 0
     for n in range(linhas):
@@ -131,16 +136,50 @@ elif versão == "D":
                 usado = 1
             else:
                 usado = 0
-
-
-
-
-
-
 for i in range(linhas):
     print(matriz5x5[i])
+'''
+#5
+matriz15x7 =[]
+matriz15x7Original =[]
+linhas = 15
+colunas = 7
+matrizPar = []
+matrizImpar = []
+controleColunaPar = 0
+controleColunaImpar = 0
+for n in range (linhas):
+    matrizSecundaria = []
+    for i in range (colunas):
+        matrizSecundaria.append(random.randint(10, 99))
+    matriz15x7.append(matrizSecundaria)
+matriz15x7Original = [linha[:] for linha in matriz15x7]
+matriz15x7.clear()
+for n in range (linhas):
+    for i in range (colunas):
+        if matriz15x7Original[n][i] % 2 == 0:
+            matrizPar.append(matriz15x7Original[n][i])
+        else:
+            matrizImpar.append(matriz15x7Original[n][i])
 
-
+for n in range (linhas):
+    matrizSecundaria = []
+    for i in range (colunas):
+        if controleColunaPar < len(matrizPar):
+            matrizSecundaria.append(matrizPar[controleColunaPar])
+            controleColunaPar += 1
+        else:
+            matrizSecundaria.append(matrizImpar[controleColunaImpar])
+            controleColunaImpar += 1
+    matriz15x7.append(matrizSecundaria)
+for i in range(linhas):
+    print(F"Original: {matriz15x7Original[i]}")
+print()
+for i in range(linhas):
+    print(F"Modificada: {matriz15x7[i]}")
+        
+        
+        
 
 
 

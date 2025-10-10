@@ -138,7 +138,7 @@ elif versão == "D":
                 usado = 0
 for i in range(linhas):
     print(matriz5x5[i])
-'''
+
 #5
 matriz15x7 =[]
 matriz15x7Original =[]
@@ -177,9 +177,29 @@ for i in range(linhas):
 print()
 for i in range(linhas):
     print(F"Modificada: {matriz15x7[i]}")
-        
-        
-        
 
+#6
+listaCidades = ["Curitiba", "Florianópolia", "Porto Alegre", "São Paulo", "Rio de Janeiro"]
+distancia= [
+    [0,   310, 716, 408, 852],
+    [310, 0,   470, 705, 1144],
+    [716, 470, 0,   1119, 1553],
+    [408, 705, 1119, 0,   429],
+    [852, 1144, 1553, 429, 0]
+]
+distanciaViagem = 0
+velocidade = 100
+cidadeInicio = int(input("Digite qual cidade você vai sair, de 0 a 4, Curitiba, Florianópolis, Porto Alegre, São Paulo, Rio de Janeiro: "))
+while cidadeInicio > 4 or cidadeInicio < 0:
+    cidadeInicio = int(input("Erro,tente novamente. \nDigite qual cidade você vai sair, de 0 a 4, Curitiba, Florianópolis, Porto Alegre, São Paulo, Rio de Janeiro: "))
+cidadeDestino = int(input("Digite qual cidade você deseja ir, de 0 a 4, Curitiba, Florianópolis, Porto Alegre, São Paulo, Rio de Janeiro: "))
+while cidadeDestino > 4 or cidadeDestino < 0:
+    cidadeDestino = int(input("Erro,tente novamente. \nDigite qual cidade você deseja ir, de 0 a 4, Curitiba, Florianópolis, Porto Alegre, São Paulo, Rio de Janeiro: "))
+distanciaViagem = distancia[cidadeInicio][cidadeDestino]
+if distanciaViagem == 0:
+    print(F"Essa será a distancia total da viagem: {distanciaViagem} \nVocê não mudou de cidade")
+else:
+    print(F"Essa será a distancia total da viagem: {distanciaViagem} \nA 100 km/H(Limite das rodovias federais de pista simples ) você vai levar {distanciaViagem/velocidade} horas")
+'''
 
 

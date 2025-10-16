@@ -201,5 +201,59 @@ if distanciaViagem == 0:
 else:
     print(F"Essa será a distancia total da viagem: {distanciaViagem} \nA 100 km/H(Limite das rodovias federais de pista simples ) você vai levar {distanciaViagem/velocidade} horas")
 '''
+#7
+listaCidades = ["Curitiba", "Florianópolia", "Porto Alegre", "São Paulo", "Rio de Janeiro"]
+distancia= [
+    [0,   310, 716, 408, 852],
+    [310, 0,   470, 705, 1144],
+    [716, 470, 0,   1119, 1553],
+    [408, 705, 1119, 0,   429],
+    [852, 1144, 1553, 429, 0]
+]
+distanciaViagem = 0
+velocidade = 100
+continuar = 1
+novoDestino = 0
+distanciaAdicional = 0
+listaDestinos =[]
+listaDeDistanciasDoRoteiro = []
+def Viagem():
+    global distanciaViagem, cidadeDestino, continuar, listaDeDistanciasDoRoteiro,distanciaAdicional, listaDestinos, distanciaAdicional, listaCidades
+    continuar = int(input("Deseja adicionar mais uma cidade, se sim digite 1, se não digite 0: "))
+    while continuar not in [0, 1]:
+        continuar = int(input("Erro,digite novamente. \nDeseja adicionar mais uma cidade, se sim digite 1, se não digite 0: "))
+    while continuar == 1:
+        novoDestino = int(input("Digite qual cidade você quer adicionar ao roteiro, de 0 a 4, Curitiba, Florianópolis, Porto Alegre, São Paulo, Rio de Janeiro: "))
+        while novoDestino > 4 or novoDestino < 0:
+            novoDestino = int(input("Erro,tente novamente. \nDigite qual cidade você quer ir, de 0 a 4, Curitiba, Florianópolis, Porto Alegre, São Paulo, Rio de Janeiro: "))
+        listaDestinos.append(listaCidades[novoDestino])
+        distanciaAdicional = distancia[cidadeDestino][novoDestino]
+        distanciaViagem += distanciaAdicional
+        listaDeDistanciasDoRoteiro.append(distanciaAdicional)
+        cidadeDestino = novoDestino
+        continuar = int(input("Deseja adicionar mais uma cidade, se sim digite 1, se não digite 0: "))
+        while continuar not in [0, 1]:
+            continuar = int(input("Erro,digite novamente. \nDeseja adicionar mais uma cidade, se sim digite 1, se não digite 0: "))
 
 
+cidadeInicio = int(input("Digite qual cidade você vai sair, de 0 a 4, Curitiba, Florianópolis, Porto Alegre, São Paulo, Rio de Janeiro: "))
+while cidadeInicio > 4 or cidadeInicio < 0:
+    cidadeInicio = int(input("Erro,tente novamente. \nDigite qual cidade você vai sair, de 0 a 4, Curitiba, Florianópolis, Porto Alegre, São Paulo, Rio de Janeiro: "))
+listaDestinos.append(listaCidades[cidadeInicio])
+
+cidadeDestino = int(input("Digite qual cidade você deseja ir, de 0 a 4, Curitiba, Florianópolis, Porto Alegre, São Paulo, Rio de Janeiro: "))
+while cidadeDestino > 4 or cidadeDestino < 0:
+    cidadeDestino = int(input("Erro,tente novamente. \nDigite qual cidade você deseja ir, de 0 a 4, Curitiba, Florianópolis, Porto Alegre, São Paulo, Rio de Janeiro: "))
+
+distanciaViagem = distancia[cidadeInicio][cidadeDestino]
+listaDestinos.append(listaCidades[cidadeDestino])
+listaDeDistanciasDoRoteiro.append(distanciaViagem)
+
+Viagem()
+
+if distanciaViagem == 0:
+    print(F"Essa será a distancia total da viagem: {distanciaViagem} \nVocê não mudou de cidade")
+else:
+    print(F"Essa será a distancia total da viagem: {distanciaViagem} \nA 100 km/H(Limite das rodovias federais de pista simples ) você vai levar {distanciaViagem/velocidade} horas \nE essas são as cidades do roteiro e suas distancias entre si: ")
+for n in range(len(listaDeDistanciasDoRoteiro)):
+     print(F"cidade: {listaDestinos[n]} até {listaDestinos[n+1]} a distancia é: {listaDeDistanciasDoRoteiro[n]}")

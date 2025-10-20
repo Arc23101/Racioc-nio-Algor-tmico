@@ -67,6 +67,8 @@ def getOperation():
           inicialNum = inicialNum * secondNum
     elif operation == 4:
           inicialNum = inicialNum / secondNum
+    while operation < 1 or operation > 4:
+             operation = int(input("Erro, try again. \nWhat  do you wish to do: to add write 1, to subtract write 2, to multipli write 3, to divide write 4: "))
 def getNum():
      global inicialNum, secondNum, firstTime
      inicialNum = int(input("write a number to use: "))

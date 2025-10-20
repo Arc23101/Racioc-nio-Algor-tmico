@@ -1,13 +1,13 @@
 ##Funções
 import random
 ##1
-
+    
 x = 1
-def Impares(x):
+def Even(x):
     while x < 100:
         print(x)
         x+= 2
-Impares(x)
+Even(x)
 
 ##2
 hoursDay = 24

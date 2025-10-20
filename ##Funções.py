@@ -51,7 +51,7 @@ if isIn  == True:
     print(F"{randomList}, {randomNumber}, is in list")
 elif isIn  == False:
     print(F"{randomList}, {randomNumber}, is not in list")
-'''
+
 ##Calculadora:
 inicialNum = 0
 secondNum = 0
@@ -84,3 +84,34 @@ while True:
     getOperation()
     print(F"Result = {inicialNum}")
     firstTime = int(input("Do you wish to reset? 1 to yes, 0 to no(continue with the result of the previous operation): "))
+'''
+##Project Euler 32
+resultOfAllNum = 0
+multiplied = 0
+multiplier = 0  
+pandigital = []
+product = 0
+def isPandigital():
+    global resultOfAllNum, pandigital, product
+    product = multiplied * multiplier
+    number = str(multiplied) + str(multiplier) + str(product)
+    if len(number) == 9:
+        for i in range(1,10):
+            if not str(i) in number:
+                return False
+        return True
+    else:
+        return False
+for multiplied in range(9880000):
+    for multiplier in range(9880000):
+        if len(str(multiplied * multiplier)) >= 8:
+            break
+        else: 
+            isPandigital()
+            if isPandigital():
+                if product not in pandigital:
+                    resultOfAllNum += product
+                    pandigital.append(product)
+                    print(product)
+print(resultOfAllNum)
+    

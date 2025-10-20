@@ -1,6 +1,6 @@
 ##Jokenpô(Antony V Braghini)
 import random
-
+resultadosVitoriaPlayer2 = [[1,2], [2,3], [3,1]]
 def coletarJogadaHumano():
     escolhaPlayer = int(input("Digite 1 para tesoura, 2 para Pedra e 3 para papel: "))
     while escolhaPlayer < 1 or escolhaPlayer > 3:
@@ -14,7 +14,7 @@ def coletarJogadaBot():
 def verificarGanhador(escolhaPlayer1, escolhaPlayer2):
     if escolhaPlayer1 == escolhaPlayer2:
         return 0
-    elif escolhaPlayer1 == 1 and escolhaPlayer2 == 2 or escolhaPlayer1 == 2 and escolhaPlayer2 == 3 or escolhaPlayer1 == 3 and escolhaPlayer2 ==1:
+    elif [escolhaPlayer1, escolhaPlayer2] in resultadosVitoriaPlayer2:
             return 2
     else:
         return 1

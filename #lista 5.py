@@ -1,6 +1,6 @@
 #lista 5
 import random
-'''
+
 #1
 matriz4x4 =[]
 maioresNumeros = []
@@ -96,6 +96,11 @@ colunas = 5
 versões = ["A", "B", "C", "D"]
 primeiro = 1
 segundo = -1
+somas = 0
+def soma():
+    global somas
+    somas += matriz5x5[n][j]
+
 for n in range (linhas):
     matrizSecundaria = []
     for i in range (colunas):
@@ -109,6 +114,8 @@ if versão == "A":
         for j in range(colunas):
             if not n == 2 and not j == 2:
                 matriz5x5[n][j] = "x"
+            else:
+                soma()
 
 elif versão == "B":
     for n in range(linhas):
@@ -116,11 +123,16 @@ elif versão == "B":
             if n!= 0 and n != 4:
                     if j !=0 and j!= 4:
                         matriz5x5[n][j] = "x"
+                    else:
+                        soma()
+                    
 elif versão == "C":
     for n in range(linhas):
         for j in range(colunas):
             if not j == primeiro and  not j == segundo:
                         matriz5x5[n][j] = "x"
+            else:
+                soma()
         primeiro += 1
         segundo += 1
         if primeiro > 4:
@@ -136,8 +148,10 @@ elif versão == "D":
                 usado = 1
             else:
                 usado = 0
+                soma()
 for i in range(linhas):
     print(matriz5x5[i])
+print(F"A soma dos valores é {somas}")
 
 #5
 matriz15x7 =[]
@@ -200,7 +214,7 @@ if distanciaViagem == 0:
     print(F"Essa será a distancia total da viagem: {distanciaViagem} \nVocê não mudou de cidade")
 else:
     print(F"Essa será a distancia total da viagem: {distanciaViagem} \nA 100 km/H(Limite das rodovias federais de pista simples ) você vai levar {distanciaViagem/velocidade} horas")
-'''
+
 #7
 listaCidades = ["Curitiba", "Florianópolia", "Porto Alegre", "São Paulo", "Rio de Janeiro"]
 distancia= [

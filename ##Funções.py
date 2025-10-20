@@ -77,7 +77,7 @@ def secondOperation():
 while True:
     if firstTime == 1:
         getNum()
-    if firstTime == 0:
+    elif firstTime == 0:
         secondOperation()
     getOperation()
     print(F"Result = {inicialNum}")

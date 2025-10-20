@@ -2,18 +2,20 @@
 import random
 ##1
     
-x = 1
-def Even(x):
-    while x < 100:
-        print(x)
-        x+= 2
-Even(x)
+x = 0
+maxNum = 100
+def Even(x, maxNum):
+    while x < maxNum:
+        if  x % 2 == 1:
+             print(x)
+
+Even(x, maxNum)
 
 ##2
 hoursDay = 24
 Seconds = 0
 def calucularHoras ():
-    global hoursDay, Seconds
+    global Seconds
     if hoursDay > 0:
         Seconds += 60 * 60
         hoursDay -= 1

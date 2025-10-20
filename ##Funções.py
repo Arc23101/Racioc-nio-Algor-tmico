@@ -1,7 +1,7 @@
 ##Funções
 import random
 ##1
-    
+'''
 x = 0
 maxNum = 100
 def Even(x, maxNum):
@@ -12,6 +12,7 @@ def Even(x, maxNum):
 Even(x, maxNum)
 
 ##2
+
 hoursDay = 24
 Seconds = 0
 def calucularHoras ():
@@ -50,3 +51,34 @@ if isIn  == True:
     print(F"{randomList}, {randomNumber}, is in list")
 elif isIn  == False:
     print(F"{randomList}, {randomNumber}, is not in list")
+'''
+##Calculadora:
+inicialNum = 0
+secondNum = 0
+firstTime = 1
+def getOperation():
+    global inicialNum
+    operation = int(input("What  do you wish to do: to add write 1, to subtract write 2, to multipli write 3, to divide write 4: "))
+    if operation == 1:
+          inicialNum = inicialNum + secondNum
+    elif operation == 2:
+          inicialNum = inicialNum - secondNum
+    elif operation == 3:
+          inicialNum = inicialNum * secondNum
+    elif operation == 4:
+          inicialNum = inicialNum / secondNum
+def getNum():
+     global inicialNum, secondNum, firstTime
+     inicialNum = int(input("write a number to use: "))
+     firstTime = 0
+def secondOperation():
+     global secondNum
+     secondNum = int(input("write a new number to use: "))
+while True:
+    if firstTime == 1:
+        getNum()
+    if firstTime == 0:
+        secondOperation()
+    getOperation()
+    print(F"Result = {inicialNum}")
+    firstTime = int(input("Do you wish to reset? 1 to yes, 0 to no(continue with the result of the previous operation): "))

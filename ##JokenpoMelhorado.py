@@ -1,17 +1,19 @@
 ##Jokenpô(Antony V Braghini)
 import random
-resultadosVitoriaPlayer2 = [[1,2], [2,3], [3,1]]
+resultadosVitoria = [[0, 2, 1],
+                     [1, 0, 2],
+                     [2, 1, 0]]
 jogadas = ["tesoura", "pedra", "papel"]
 def coletarJogadaHumano():
     escolhaPlayer = str(input("Digite tesoura, Pedra ou papel(A frase se repete quando é a vez do proximo player): "))
     while escolhaPlayer not in jogadas:
         escolhaPlayer = str(input("Inválido digite Novamente, tesoura, Pedra ou papel: "))
     if escolhaPlayer =="tesoura":
-        escolhaPlayer = 1
+        escolhaPlayer = 0
     elif escolhaPlayer =="pedra":
-        escolhaPlayer = 2
+        escolhaPlayer = 1
     elif escolhaPlayer =="papel":
-        escolhaPlayer = 3
+        escolhaPlayer = 2
     return escolhaPlayer
 
 def coletarJogadaBot():
@@ -21,7 +23,7 @@ def coletarJogadaBot():
 def verificarGanhador(escolhaPlayer1, escolhaPlayer2):
     if escolhaPlayer1 == escolhaPlayer2:
         return 0
-    elif [escolhaPlayer1, escolhaPlayer2] in resultadosVitoriaPlayer2:
+    elif resultadosVitoria[escolhaPlayer1] [escolhaPlayer2] == 2:
             return 2
     else:
         return 1
